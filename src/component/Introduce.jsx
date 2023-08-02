@@ -5,7 +5,7 @@ function Introduce(){
 
     return(
         <div className="Introduce">
-        <header className="IntroduceHeader">
+        <header >
             <img src={Photo}/>
         </header>
         <footer>

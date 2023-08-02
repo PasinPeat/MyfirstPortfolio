@@ -9,7 +9,7 @@ import OtherProject from "./component/OtherProject";
 import Skill from "./component/Skill";
 function App() {
   return (
-    <div>
+    <div className="LandingPage">
       <LeftSidebar />
       
       <div className="CenterContent">
