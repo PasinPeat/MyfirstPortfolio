@@ -1,5 +1,4 @@
 import React from "react";
-import houseLogo from "../icon/house.svg";
 import Logo from "../icon/Logo.png";
 import dot from "../icon/dot.svg";
 import "../App.css";
