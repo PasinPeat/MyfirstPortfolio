@@ -1,12 +1,13 @@
 import { useState } from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LeftSidebar from "./component/leftSidebar";
-import Introduce from "./component/Introduce";
-import OtherProject from "./component/OtherProject";
+import Introduce from "./pages/Introduce";
+import OtherProject from "./pages/OtherProject";
+import Passion from "./pages/Passion";
 import Post from "./component/Post";
 import TopInput from "./component/TopInput";
+import LeftSidebar from "./component/leftSidebar";
+import CenterContent from "./component/CenterContent";
 import { MessageContext } from "./context/MessageContext";
 
 function App() {
@@ -22,12 +23,9 @@ function App() {
         ]}
       >
         <LeftSidebar />
+        <CenterContent/>
+        
 
-        <div className="CenterContent">
-          <TopInput />
-          <Introduce />
-          <OtherProject />
-        </div>
         <Post />
       </MessageContext.Provider>
     </div>

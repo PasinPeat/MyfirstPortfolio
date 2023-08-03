@@ -1,23 +1,26 @@
 import React from "react";
-import houseLogo from "../../public/icon/house.svg";
-import Logo from "../../public/icon/Logo.png";
+import houseLogo from "../icon/house.svg";
+import Logo from "../icon/Logo.png";
+import dot from "../icon/dot.svg";
 import "../App.css";
 function LeftSidebar() {
   return (
+    <div className="sticky">
     <div className="sidebar">
-      <img src={Logo} />
+      <img className="sidebarLogo" src={Logo} />
       <section>
-        <img src={houseLogo} />
+        <img src={dot} />
         <span>Home</span>
       </section>
       <section>
-        <img src={houseLogo} />
-        <span>Home</span>
+        <img src={dot} />
+        <span>Other product</span>
       </section>
       <section>
-        <img src={houseLogo} />
-        <span>Home</span>
+        <img src={dot} />
+        <span>Passion</span>
       </section>
+    </div>
     </div>
   );
 }

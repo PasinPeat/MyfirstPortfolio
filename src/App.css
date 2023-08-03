@@ -1,62 +1,107 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.LandingPage{
+.LandingPage {
   display: flex;
   flex-direction: row;
-  
+
   align-items: start;
 }
-.CenterContent{
-  background-color: #1D232A;
-  
-  height: 100vh;
+.CenterContent {
+  background-color: #1d232a;
+
+  /* height: 100vh; */
   width: 70vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  /* justify-content: space-between; */
   align-items: center;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
 }
-.sidebar{
-  height: 100vh;
+@keyframes fadeIn {
+  to {
+    opacity: 1; 
+  }
+}
+
+.sidebar {
+  min-height: 100vh;
+  height: 100%;
   width: 15vw;
-  padding-left: 25px; 
-   padding-top: 25px;
-  background-color: #15191C;
+  /* padding-left: 25px; */
+  padding-top: 25px;
+  background-color: #15191c;
+  position: sticky;
+  top: 0;
+  position: relative;
+  animation: mymove 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymove {
+  from {left: -300px;}
+  to {left: 0px; }
+}
+.sidebar section {
+  margin-top: 20px;
+  padding-left: 10px;
+  width:  auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
   
 }
-.sidebar section{
-  margin-top: 20px;
-  
-} 
-.Rightsidebar{
+.sidebar section:hover {
+  background-color: #2c343a; /* Change the background color on hover */
+}
+.sidebarLogo{
+  margin-left: 50px;
+}
+.sidebar section span {
+  margin-left: 15px;
+  font-size: large;
+}
+.sticky{
+  position: sticky;
+  top: 0;
+}
+.Rightsidebar {
   display: flex;
   flex-direction: column;
-  background-color:#2C343A ;
+  background-color: #2c343a;
   height: 100vh;
   width: 20vw;
-  padding-left: 25px; 
-   padding-top: 25px;
-   
+  padding-left: 25px;
+  padding-top: 25px;
+  
+  position: relative;
+  animation: mymovepost 2s;
+  animation-fill-mode: forwards;
 }
-.Message{
+@keyframes mymovepost {
+  from {right: -400px;}
+  to {right: 0px; }
+}
+.Message {
   display: flex;
   place-items: center;
   margin: 5px;
   padding-right: 40px;
-  
 }
-.Message span{
+.Message h3{
+  margin-left: 20px;
+}
+.Message span {
   margin-left: 20px;
   font-size: 20px;
   max-width: 150px;
   display: inline-block;
   overflow: hidden;
-  
 }
-.Message_image{
+.Message_image {
   width: 80px;
   height: 80px;
   margin-top: 15px;
@@ -64,7 +109,7 @@
   object-fit: cover;
 }
 
-.Input{
+.Input {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,45 +118,94 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   font-size: larger;
-  border-bottom: 4px solid #15191C;
+  border-bottom: 4px solid #15191c;
 }
-.Input_field{
-  background-color: #2C343A;
-  border:none;
+.Input_field {
+  background-color: #2c343a;
+  border: none;
   height: 40px;
   font-size: 18px;
-  padding-left:20px ;
+  padding-left: 20px;
   border-radius: 5px;
   margin-left: 20px;
   margin-right: 20px;
+  position: relative;
+  animation: mymoveinput 2.5s;
+  animation-fill-mode: forwards;
 }
-.Input button{
+@keyframes mymoveinput {
+  from {top: -800px;}
+  to {top: 0px; }
+}
+.Input button {
   margin-left: 20px;
 }
-.Introduce{
+.Introduce {
+  margin-top: 10px;
   width: 840px;
   height: 500px;
-  background-color: #2C343A;
+  background-color: #2c343a;
   border-radius: 10px;
   /* padding-left: 50px;
   padding-right: 50px; */
-  
-  
-  
+  position: relative;
+  animation: mymoveintro 1.5s;
+  animation-fill-mode: forwards;
 }
-.Introduce header{
+@keyframes mymoveintro {
+  from {bottom: -50px;}
+  to {bottom: 0px; }
+}
+.Introduce header {
   height: 60%;
   overflow: hidden;
   position: relative;
   border-radius: 10px 10px 0px 0px;
 }
-.Introduce img{
-  
+.Introduce img {
   position: absolute;
   width: 100%;
   top: 20%;
   transform: translateY(-40%);
 }
-.Introduce footer{
+.Introduce footer {
+  padding-top: 10px;
   padding-left: 10px;
+}
+
+.MyProject {
+  text-align: center;
+  width: 840px;
+  height: 350px;
+  background-color: #2c343a;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.MyProject h1{
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.MyProject footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.MyProject img{
+  width: 200px;
+}
+.passion {
+  text-align: center;
+  width: 840px;
+  height: 400px;
+  background-color: #2c343a;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.passion h1{
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+.passion img{
+  margin-right: 5px;
+  margin-left: 5px;
 }
