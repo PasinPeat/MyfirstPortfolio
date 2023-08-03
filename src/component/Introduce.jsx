@@ -9,8 +9,10 @@ function Introduce(){
             <img src={Photo}/>
         </header>
         <footer>
-            <h1>I'm a Front-end developer</h1>
-            <h2>lorem10</h2>
+            <h1>Hello Everyone Welcome to my Portfolio </h1>
+            <h2>My name is Pasin Lertarunwattana, Now I'm studying Full stack Developer Bootcamp and want to be a good Front-End Developer</h2>
+            
+            <h1>Let's Enjoy !!! </h1>
         </footer>
         </div>
     )

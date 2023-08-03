@@ -11,8 +11,7 @@
 }
 .CenterContent{
   background-color: #1D232A;
-  padding-left: 50px;
-  padding-right: 50px;
+  
   height: 100vh;
   width: 70vw;
   display: flex;
@@ -66,15 +65,36 @@
 }
 
 .Input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: 15px;
   margin-bottom: 20px;
+  padding-bottom: 10px;
   font-size: larger;
+  border-bottom: 4px solid #15191C;
+}
+.Input_field{
+  background-color: #2C343A;
+  border:none;
+  height: 40px;
+  font-size: 18px;
+  padding-left:20px ;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Input button{
+  margin-left: 20px;
 }
 .Introduce{
   width: 840px;
   height: 500px;
   background-color: #2C343A;
   border-radius: 10px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
   
   
   

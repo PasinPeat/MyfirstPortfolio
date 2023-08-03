@@ -13,14 +13,20 @@ function TopInput() {
   function handleAddPost(e) {
     e.preventDefault();
     const newPosts = [...posts];
-    newPosts.push(input);
-    setPosts(newPosts);
-    setInput("");
+
+    if (input === "") {
+      alert("Please text something to me !!");
+    } else {
+      
+      newPosts.push(input);
+      setPosts(newPosts);
+      setInput("");
+    }
   }
 
   return (
     <div className="Input">
-      <span className="Input_header">Say something to Peat </span>
+      <span className="Input_header">Say </span>
       <input
         className="Input_field"
         type="text"
@@ -28,6 +34,7 @@ function TopInput() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
+      <span className="Input_header"> to Me </span>
       <button
         value={input}
         onClick={handleAddPost}
