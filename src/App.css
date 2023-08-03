@@ -9,10 +9,20 @@
   
   align-items: start;
 }
-
+.CenterContent{
+  background-color: #1D232A;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
 .sidebar{
   height: 100vh;
-  width: 200px;
+  width: 15vw;
   padding-left: 25px; 
    padding-top: 25px;
   background-color: #15191C;
@@ -20,8 +30,46 @@
 }
 .sidebar section{
   margin-top: 20px;
-  ;
+  
 } 
+.Rightsidebar{
+  display: flex;
+  flex-direction: column;
+  background-color:#2C343A ;
+  height: 100vh;
+  width: 20vw;
+  padding-left: 25px; 
+   padding-top: 25px;
+   
+}
+.Message{
+  display: flex;
+  place-items: center;
+  margin: 5px;
+  padding-right: 40px;
+  
+}
+.Message span{
+  margin-left: 20px;
+  font-size: 20px;
+  max-width: 150px;
+  display: inline-block;
+  overflow: hidden;
+  
+}
+.Message_image{
+  width: 80px;
+  height: 80px;
+  margin-top: 15px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.Input{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: larger;
+}
 .Introduce{
   width: 840px;
   height: 500px;

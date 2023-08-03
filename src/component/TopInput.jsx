@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import React from "react";
+import { MessageContext } from "../context/MessageContext";
 
 function TopInput() {
-  const [input, setInput] = useState("");
-  const [posts, setPosts] = useState([]);
+  // const [input, setInput] = useState("");
+  // const [posts, setPosts] = useState([]);
+
+  const context = useContext(MessageContext) 
+  const {input,setInput} = context[0]
+  const {posts, setPosts} = context[1]
 
   function handleAddPost(e) {
     e.preventDefault();
@@ -15,7 +20,7 @@ function TopInput() {
 
   return (
     <div className="Input">
-      <div className="Input_header">Say something to me</div>
+      <span className="Input_header">Say something to Peat </span>
       <input
         className="Input_field"
         type="text"
@@ -31,15 +36,7 @@ function TopInput() {
       >
         Click
       </button>
-      <div>
-        {posts.map((item, index) => {
-          return (
-            <div key={index} className="message">
-              <h1>{item}</h1>
-            </div>
-          );
-        })}
-      </div>
+      
     </div>
   );
 }
