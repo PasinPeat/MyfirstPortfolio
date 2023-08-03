@@ -1,42 +1,211 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+.LandingPage {
+  display: flex;
+  flex-direction: row;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  align-items: start;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.CenterContent {
+  background-color: #1d232a;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+  /* height: 100vh; */
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1; 
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.sidebar {
+  min-height: 100vh;
+  height: 100%;
+  width: 15vw;
+  /* padding-left: 25px; */
+  padding-top: 25px;
+  background-color: #15191c;
+  position: sticky;
+  top: 0;
+  position: relative;
+  animation: mymove 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymove {
+  from {left: -300px;}
+  to {left: 0px; }
+}
+.sidebar section {
+  margin-top: 20px;
+  padding-left: 10px;
+  width:  auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+.sidebar section:hover {
+  background-color: #2c343a; /* Change the background color on hover */
+}
+.sidebarLogo{
+  margin-left: 50px;
+}
+.sidebar section span {
+  margin-left: 15px;
+  font-size: large;
+}
+.sticky{
+  position: sticky;
+  top: 0;
+}
+.Rightsidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #2c343a;
+  height: 100vh;
+  width: 20vw;
+  padding-left: 25px;
+  padding-top: 25px;
+  
+  position: relative;
+  animation: mymovepost 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymovepost {
+  from {right: -400px;}
+  to {right: 0px; }
+}
+.Message {
+  display: flex;
+  place-items: center;
+  margin: 5px;
+  padding-right: 40px;
+}
+.Message h3{
+  margin-left: 20px;
+}
+.Message span {
+  margin-left: 20px;
+  font-size: 20px;
+  max-width: 150px;
+  display: inline-block;
+  overflow: hidden;
+}
+.Message_image {
+  width: 80px;
+  height: 80px;
+  margin-top: 15px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
-.card {
-  padding: 2em;
+.Input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: larger;
+  border-bottom: 4px solid #15191c;
+}
+.Input_field {
+  background-color: #2c343a;
+  border: none;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  animation: mymoveinput 2.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymoveinput {
+  from {top: -800px;}
+  to {top: 0px; }
+}
+.Input button {
+  margin-left: 20px;
+}
+.Introduce {
+  margin-top: 10px;
+  width: 840px;
+  height: 500px;
+  background-color: #2c343a;
+  border-radius: 10px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  position: relative;
+  animation: mymoveintro 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes mymoveintro {
+  from {bottom: -50px;}
+  to {bottom: 0px; }
+}
+.Introduce header {
+  height: 60%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+}
+.Introduce img {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  transform: translateY(-40%);
+}
+.Introduce footer {
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.MyProject {
+  text-align: center;
+  width: 840px;
+  height: 350px;
+  background-color: #2c343a;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.MyProject h1{
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.MyProject footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.MyProject img{
+  width: 200px;
+}
+.passion {
+  text-align: center;
+  width: 840px;
+  height: 400px;
+  background-color: #2c343a;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.passion h1{
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+.passion img{
+  margin-right: 5px;
+  margin-left: 5px;
 }
